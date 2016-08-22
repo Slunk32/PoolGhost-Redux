@@ -18,13 +18,13 @@ var _HomePage = require('./components/home/HomePage');
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _AboutPage = require('./components/about/AboutPage');
+var _HelpPage = require('./components/help/HelpPage');
 
-var _AboutPage2 = _interopRequireDefault(_AboutPage);
+var _HelpPage2 = _interopRequireDefault(_HelpPage);
 
-var _CoursesPage = require('./components/course/CoursesPage');
+var _GamePage = require('./components/game/GamePage');
 
-var _CoursesPage2 = _interopRequireDefault(_CoursesPage);
+var _GamePage2 = _interopRequireDefault(_GamePage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,7 +32,7 @@ exports.default = _react2.default.createElement(
   _reactRouter.Route,
   { path: '/', component: _App2.default },
   _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: 'courses', component: _CoursesPage2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _AboutPage2.default })
+  _react2.default.createElement(_reactRouter.Route, { path: 'game', component: _GamePage2.default }),
+  _react2.default.createElement(_reactRouter.Route, { path: 'help', component: _HelpPage2.default })
 );
 //# sourceMappingURL=/Users/RSalerno/Documents/coding/poolghost-redux/routes.js.map

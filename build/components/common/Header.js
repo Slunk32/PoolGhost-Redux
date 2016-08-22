@@ -25,14 +25,14 @@ var Header = function Header() {
     " | ",
     _react2.default.createElement(
       _reactRouter.Link,
-      { to: '/courses', activeClassName: 'active' },
-      'Courses'
+      { to: '/game', activeClassName: 'active' },
+      'Game'
     ),
     " | ",
     _react2.default.createElement(
       _reactRouter.Link,
-      { to: '/about', activeClassName: 'active' },
-      'About'
+      { to: '/help', activeClassName: 'active' },
+      'Help'
     )
   );
 };

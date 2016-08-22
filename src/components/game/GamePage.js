@@ -1,13 +1,13 @@
 import React, {PropTypes} from 'react';
 
-class CoursesPage extends React.Component {
+class GamePage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Courses</h1>
+        <h1>Game</h1>
       </div>
     );
   }
 }
 
-export default CoursesPage;
+export default GamePage;
