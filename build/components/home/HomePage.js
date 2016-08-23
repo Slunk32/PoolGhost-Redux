@@ -38,17 +38,17 @@ var HomePage = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'Testh1'
+          'Pool Ghost'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'TestP'
+          'Play Against The Ghost!'
         ),
         _react2.default.createElement(
           _reactRouter.Link,
-          { to: 'about', className: 'btn btn-primary btn-lg' },
-          'Learn More'
+          { to: 'game', className: 'btn btn-primary btn-lg' },
+          'Start New Game'
         )
       );
     }
