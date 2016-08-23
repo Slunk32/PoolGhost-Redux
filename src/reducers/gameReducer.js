@@ -1,8 +1,10 @@
+import * as types from '../actions/actionTypes';
+
 export default function gameReducer(state = [], action) {
   switch(action.type) {
-    case 'CREATE_GAME':
+    case types.CREATE_GAME:
       return [...state,
-        Object.assign({}, action.course)
+        Object.assign({}, action.game)
       ];
 
     default:
