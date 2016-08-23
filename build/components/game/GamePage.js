@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21,23 +21,57 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var GamePage = function (_React$Component) {
   _inherits(GamePage, _React$Component);
 
-  function GamePage() {
+  function GamePage(props, context) {
     _classCallCheck(this, GamePage);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(GamePage).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GamePage).call(this, props, context));
+
+    _this.state = {
+      course: { title: "" }
+    };
+
+    _this.onTitleChange = _this.onTitleChange.bind(_this);
+    _this.onClickSave = _this.onClickSave.bind(_this);
+
+    return _this;
   }
 
   _createClass(GamePage, [{
-    key: 'render',
+    key: "onTitleChange",
+    value: function onTitleChange(event) {
+      var course = this.state.course;
+      course.title = event.target.value;
+      this.setState({ course: course });
+    }
+  }, {
+    key: "onClickSave",
+    value: function onClickSave() {
+      alert("Saving " + this.state.course.title);
+    }
+  }, {
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "jumbotron" },
         _react2.default.createElement(
-          'h1',
+          "h1",
           null,
-          'Game'
-        )
+          "Game"
+        ),
+        _react2.default.createElement(
+          "h2",
+          null,
+          "New Game"
+        ),
+        _react2.default.createElement("input", {
+          type: "text",
+          onChange: this.onTitleChange,
+          value: this.state.course.title }),
+        _react2.default.createElement("input", {
+          type: "submit",
+          value: "save",
+          onClick: this.onClickSave })
       );
     }
   }]);
